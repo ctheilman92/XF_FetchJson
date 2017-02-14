@@ -58,7 +58,6 @@ namespace XF_FetchJson.Pages
 			this.Content = stack;
 
 			getID.Completed += (sender, e) => {
-				//userid = Int16.Parse(e.NewTextValue);
 				var ttext = ((Entry)sender).Text;
 				userid = Int16.Parse(ttext);
 			};
