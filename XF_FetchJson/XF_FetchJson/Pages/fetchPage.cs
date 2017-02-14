@@ -57,11 +57,11 @@ namespace XF_FetchJson.Pages
 			this.Padding = new Thickness(0, topPadding, 0, 0);
 			this.Content = stack;
 
-			getID.TextChanged += (sender, e) => {
-				userid = Int16.Parse(e.NewTextValue);
+			getID.Completed += (sender, e) => {
+				//userid = Int16.Parse(e.NewTextValue);
+				var ttext = ((Entry)sender).Text;
+				userid = Int16.Parse(ttext);
 			};
-
-			//fetchBtn.Clicked += async delegate { await getData(userid); };
 
 			fetchBtn.Clicked += async (sender, e) => { await getData(userid); };
 
